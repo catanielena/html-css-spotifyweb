@@ -1,20 +1,27 @@
 /* reset */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 /* common */
-body{
+body {
     background-color: #141922;
 }
 
-/* button */
+ul {
+    list-style: none;
+}
 
+/* button */
+a.btn {
+    display: inline-block;
+    text-decoration: none;
+}
 
 /* main-container */
-.main-container{
+.main-container {
     display: flex;
     flex-direction: row;
     background-color:grey; 
@@ -23,33 +30,122 @@ body{
 
 
 /* aside */
-aside{
+aside {
     flex-basis: 50px;
     border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.main-nav {
+    flex-grow: 1;
+}
+
+.aside-bottom {
+    height: 100px;
+    align-self: flex-end;
+    width: 100%;
+}
+
+.aside-icon-text {
+    display: none;
+}
+
+.playlist {
+    display: none;
+}
+
+.aside-bottom {
+    align-self: flex-end;
 }
 
 /* main */
-main{
+main {
     flex-basis: calc(100% - 50px);
     border: 1px solid;
 }
 
+.main-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: calc(100% - 50px);
+    height: 85px;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: right;
+}
+
+.main-content {
+    padding-top: 85px;
+}
+
+.content {
+    padding: 20px 20px 0;
+}
+.nav-genre {
+    text-align: center;
+    background-color: burlywood;
+}
+.nav-genre li {
+    display: inline-block;
+}
+
+.nav-genre li a{
+    padding: 10px;
+}
+
+.recent-items{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.item-img{
+    width: 180px;
+    height: 180px;
+    background-color: lightcyan;
+    
+}
+
 /* footer */
-footer{
+footer {
     height: 90px;
     background-color: darkred;
+    z-index: 1;
 }
 
 /* ≥ 600px */
 @media screen and (min-width: 600px) {
 
     /* aside */
-    aside{
+    aside {
         flex-basis: 230px;
+    }
+
+    .main-nav {
+        flex-grow: 0;
+    }
+
+    nav.playlist {
+        overflow-y: auto;
+        flex-grow: 1;
+        background-color: green;
+    }
+
+    .aside-icon-text {
+        display: inline-block;
+    }
+    
+    .playlist {
+        display: block;
     }
     
     /* main */
-    main{
+    main {
         flex-basis: calc(100% - 230px);
+    }
+
+    .main-top {
+        width: calc(100% - 230px);
     }
 }
