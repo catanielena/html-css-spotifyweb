@@ -10,6 +10,46 @@ body{
     background-color: #141922;
 }
 
+/* button */
+
+
+/* main-container */
+.main-container{
+    display: flex;
+    flex-direction: row;
+    background-color:grey; 
+    height: calc(100vh - 90px);
+}
+
+
 /* aside */
+aside{
+    flex-basis: 50px;
+    border: 1px solid;
+}
+
 /* main */
+main{
+    flex-basis: calc(100% - 50px);
+    border: 1px solid;
+}
+
 /* footer */
+footer{
+    height: 90px;
+    background-color: darkred;
+}
+
+/* ≥ 600px */
+@media screen and (min-width: 600px) {
+
+    /* aside */
+    aside{
+        flex-basis: 230px;
+    }
+    
+    /* main */
+    main{
+        flex-basis: calc(100% - 230px);
+    }
+}
