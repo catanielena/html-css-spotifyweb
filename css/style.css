@@ -1,0 +1,15 @@
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* common */
+body{
+    background-color: #141922;
+}
+
+/* aside */
+/* main */
+/* footer */
