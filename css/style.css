@@ -6,19 +6,120 @@
 }
 
 /* common */
+:root {
+    --dark: #141922;
+    --dark-grey: #282828;
+    --grey: #7d7f84;
+    --icon-grey: #a3a3a3;
+    --home-icon: "\f015";
+    --search-icon: "\f002";
+    --library-icon: "\f518";
+    --plus-icon: "\f067";
+    --download-icon: "\f358";
+    --heart-icon: "\f004";
+    --folder-icon: "\f07b";
+    --shuffle-icon: "\f074";
+    --back-icon: "\f048";
+    --play-icon: "\f144";
+    --next-icon: "\f051";
+    --redo-icon: "\f2f9";
+    --list-icon: "\f0ca";
+    --monitor-icon: "\f108";
+    --volume-up-icon: "\f028";
+}
+
 body {
-    background-color: #141922;
+    background-color: var(--dark);
+    color: white;
 }
 
 ul {
     list-style: none;
 }
 
-.circle{
-    border-radius: 50%;
+
+.fa-ul {
+    margin-left: 0;
+}
+.fa-ul li {
+    display: block;
+}
+
+/* icons */
+li.icon::before, .btn.icon::before {
+    font-family: "Font Awesome 5 Free";
+    display: inline-block;
+    margin-left: .5rem;
+    width: 1rem; 
+    color: var(--icon-grey);
+}
+
+li.icon--home::before {
+    content: var(--home-icon);
+    font-weight: 900;
+}
+li.icon--search::before {
+    content: var(--search-icon);
+    font-weight: 900;
+}
+li.icon--library::before {
+    content: var(--library-icon);
+    font-weight: 900;
+}
+.btn.icon--plus::before {
+    content: var(--plus-icon);
+    font-weight: 900;
+}
+li.icon--dowload::before {
+    content: var(--download-icon);
+}
+.btn.icon--heart::before {
+    content: var(--heart-icon);    
+}
+.btn.icon--folder::before {
+    content: var(--folder-icon);
+}
+.btn.icon--shuffle::before {
+    content: var(--shuffle-icon);
+    font-weight: 900;
+}
+.btn.icon--back::before {
+    content: var(--back-icon);
+    font-weight: 900;
+}
+.btn.icon--play::before {
+    content: var(--play-icon);
+}
+.btn.icon--next::before {
+    content: var(--next-icon);
+    font-weight: 900;
+
+}
+.btn.icon--redo::before {
+    content: var(--redo-icon);
+    font-weight: 900;
+
+}
+.btn.icon--list::before {
+    content: var(--list-icon);
+    font-weight: 900;
+
+}
+.btn.icon--monitor::before {
+    content: var(--monitor-icon);
+    font-weight: 900;
+}
+.btn.icon--volume-up::before {
+    content: var(--volume-up-icon);
+    font-weight: 900;
+
 }
 
 /* button */
+a {
+    color: var(--grey);
+}
+
 button{
     border: none;
     border-width: 0;
@@ -43,7 +144,6 @@ h4{
 .main-container {
     display: flex;
     flex-direction: row;
-    background-color:grey; 
     height: calc(100vh - 90px);
 }
 
@@ -51,41 +151,35 @@ h4{
 /* aside */
 aside {
     flex-basis: 50px;
-    border: 1px solid;
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    background-color: black;
 }
 
-.main-nav {
+.aside__nav.main-nav {
     flex-grow: 1;
 }
 
-.aside-bottom {
-    height: 100px;
+.aside__nav.playlist-nav {
+    display: none;
+}
+.aside__bottom {
     align-self: flex-end;
     width: 100%;
 }
 
-.aside-icon-text {
+.list__icon-text {
     display: none;
 }
 
-.playlist {
-    display: none;
-}
-
-.aside-bottom {
-    align-self: flex-end;
-}
 
 /* main */
 main {
     flex-basis: calc(100% - 50px);
-    border: 1px solid;
 }
 
-.main-top {
+.main__head {
     position: fixed;
     top: 0;
     right: 0;
@@ -95,32 +189,32 @@ main {
     text-align: right;
 }
 
-.main-content {
+.main__content {
     padding-top: 85px;
-    overflow: auto;
+    overflow-y: auto;
     height: calc(100vh - 90px);
 }
 
-.content {
-    padding: 20px 20px 0;
-}
-
-.nav-genre li {
+.content__nav li {
     display: inline-block;
 }
-.nav-genre {
+.content__nav {
     text-align: center;
-    background-color: burlywood;
 }
 
-.nav-genre li a {
+.content__nav  li a {
     padding: 10px;
 }
 
-.content section {
+.content__sec {
+    padding: 20px 20px 0;
+}
+
+
+.content__sec section {
     margin-bottom: 20px;
 }
-.content section > div{
+.content__sec section > div{
     display: flex;
     flex-flow: row wrap;
 }
@@ -129,50 +223,55 @@ main {
     text-align: center;
 }
 
-.section-subtitle {
+.section__subtitle {
     margin-bottom: 20px;
 }
-.item-img {
+.item__img {
     width: 95%;
     padding-bottom: 100%;
     background-color: lightcyan;
 }
 
-.item .subtitle {
+.item__img--circle{
+    border-radius: 50%;
+}
+
+.item__subtitle {
     margin-bottom: 10px;
 }
 
 /* footer */
 footer {
     height: 90px;
-    background-color: darkred;
+    background-color: var(--dark-grey);
     z-index: 1;
     display: flex;
     padding: 0 13px;
 }
 
-footer > div {
+.footer__box {
     height: 90px;
     flex-basis: calc(100% / 3);
-    border: 1px solid;
 }
 
 
-.actions-bar > div, .current-track{
+.footer__box, .current-track{
     display: flex;
     align-items: center;
 }
 
-.center-top li, .actions-right li {
+.center--top li, .actions-right li {
     display: inline-block;
 }
 
-.track-img {
+
+
+.current-track__img {
     width: 30px;
     height: 30px;
     background-color: red;
 }
-.track-text {
+.current-track__text {
     margin: 0 25px 0 13px;
 }
 .current-track-icons i {
@@ -181,24 +280,24 @@ footer > div {
 
 
 
-.actions-center {
+.footer__box.actions-center {
     flex-flow: row wrap;
     justify-content: center;
     align-content: center;
 }
 
-.center-top, .center-bottom {
+.center {
     flex-basis: 100%;
     text-align: center;
 }
 
-.center-bottom {
+.center--bottom {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.duration-bar {
+.duration__bar {
     width: 100%;
     height: 5px;
     background-color:#5a5a5a;
@@ -206,7 +305,7 @@ footer > div {
     border-radius: 10px;
 }
 
-.duration-bar::before {
+.duration__bar::before {
     content: '';
     position: absolute;
     left: 0;
@@ -221,7 +320,6 @@ footer > div {
 }
 
 
-
 .actions-right ul {
     width: 100%;
     display: flex;
@@ -231,6 +329,7 @@ footer > div {
 .actions-right li {
     margin-left: 13px;
 }
+
 .actions-right li:last-child {
     width: 30%;
 }
@@ -244,30 +343,28 @@ footer > div {
         flex-basis: 230px;
     }
 
-    .main-nav {
+    .aside__nav.main-nav {
         flex-grow: 0;
     }
 
-    nav.playlist {
+    .aside__nav.playlist-nav {
         overflow-y: auto;
         flex-grow: 1;
         background-color: green;
+        display: block;
     }
 
-    .aside-icon-text {
+    .list__icon-text {
         display: inline-block;
     }
     
-    .playlist {
-        display: block;
-    }
     
     /* main */
     main {
         flex-basis: calc(100% - 230px);
     }
 
-    .main-top {
+    .main__head {
         width: calc(100% - 230px);
     }
 

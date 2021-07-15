@@ -17,33 +17,31 @@
             <!-- aside -->
             <aside>
                 
-                <nav class="main-nav">
-                    <ul>
-                        <li>
-                            <i class="fas fa-home"></i>
-                            <div class="aside-icon-text">
+                <nav class="aside__nav main-nav">
+                    <ul class="nav__list fa-ul">
+                        <li class="icon icon--home">  
+                            <div class="list__icon-text">
                                 Lorem lorem
-                            </div>
+                            </div>                          
                         </li>
-                        <li>
-                            <i class="fas fa-home"></i>
-                            <div class="aside-icon-text">
+                        <li class="icon icon--home">  
+                            <div class="list__icon-text">
                                 Lorem lorem
-                            </div>
+                            </div>                          
                         </li>
-                        <li>
-                            <i class="fas fa-home"></i>
-                            <div class="aside-icon-text">
+                        <li class="icon icon--home">  
+                            <div class="list__icon-text">
                                 Lorem lorem
-                            </div>
+                            </div>                          
                         </li>
                     </ul>
                 </nav>
-                <nav class="playlist">
-                    <div class="new-playlist">
-
-                    </div>
-                    <ul class="saved-playlist">
+                <nav class="aside__nav playlist-nav">
+                    <button class="playlist-nav__btn btn icon icon--plus">
+                        Crea Playlist
+                    </button>
+                
+                    <ul class="playlist-nav__list">
                         <li>Lorem</li>
                         <li>Lorem</li>
                         <li>Lorem</li>
@@ -53,19 +51,17 @@
                     </ul>
                 </nav>
                 
-                <div class="aside-bottom">
-                    <ul>
-                        <li class="intall-app">
-                            <i class="fas fa-home"></i>
-                            <div class="aside-icon-text">
+                <div class="aside__bottom">
+                    <ul class="fa-ul">
+                        <li class="icon icon--dowload">  
+                            <div class="list__icon-text">
                                 Lorem lorem
-                            </div>
+                            </div>  
                         </li>
-                        <li class="profile">
-                            <div class="profile-img"></div>
-                            <div class="aside-icon-text">
-                                Lorem
-                            </div>
+                        <li> 
+                            <div class="list__icon-text">
+                                Lorem lorem
+                            </div>                          
                         </li>
                     </ul>
                 </div>
@@ -74,11 +70,11 @@
     
             <!-- main -->
             <main>
-                <div class="main-top">
+                <div class="main__head">
                     Lorem ipsum 
                 </div>
-                <div class="main-content">
-                    <nav class="nav-genre">
+                <div class="main__content">
+                    <nav class="content__nav">
                         <ul>
                             <li>
                                 <a href="#" class="btn">
@@ -112,45 +108,45 @@
                             </li>
                         </ul>
                     </nav>
-                    <div class="content">
+                    <div class="content__sec">
                         <!-- recently-played -->
-                        <section class="recently-played">
+                        <section>
                             <h2>Lorem</h2>
-                            <div class="recent-items">
+                            <div class="section__items recent-items">
                                 <div class="item">
-                                    <div class="item-img"></div>
+                                    <div class="item__img"></div>
                                     <h4>Lorem lorem</h4>
-                                    <div class="subtitle">lorem</div>
+                                    <div class="item__subtitle">lorem</div>
                                 </div>
     
                                 <div class="item">
-                                    <div class="item-img"></div>
+                                    <div class="item__img"></div>
                                     <h4>Lorem lorem</h4>
-                                    <div class="subtitle">lorem</div>
+                                    <div class="item__subtitle">lorem</div>
                                 </div>
     
                                 <div class="item">
-                                    <div class="item-img"></div>
+                                    <div class="item__img"></div>
                                     <h4>Lorem lorem</h4>
-                                    <div class="subtitle">lorem</div>
+                                    <div class="item__subtitle">lorem</div>
                                 </div>
     
                                 <div class="item">
-                                    <div class="item-img"></div>
+                                    <div class="item__img"></div>
                                     <h4>Lorem lorem</h4>
-                                    <div class="subtitle">lorem</div>
+                                    <div class="item__subtitle">lorem</div>
                                 </div>
     
                                 <div class="item">
-                                    <div class="item-img"></div>
+                                    <div class="item__img"></div>
                                     <h4>Lorem lorem</h4>
-                                    <div class="subtitle">lorem</div>
+                                    <div class="item__subtitle">lorem</div>
                                 </div>
     
                                 <div class="item">
-                                    <div class="item-img"></div>
+                                    <div class="item__img"></div>
                                     <h4>Lorem lorem</h4>
-                                    <div class="subtitle">lorem</div>
+                                    <div class="item__subtitle">lorem</div>
                                 </div>
                                 
                             </div>
@@ -158,19 +154,19 @@
                         <!-- /recently-played -->
 
                         <!-- created for -->
-                        <section class="created-for">
+                        <section>
                             <h2>Lorem</h2>
-                            <div class="section-subtitle">
+                            <div class="section__subtitle">
                                 Lorem ipsum dolor sit amet 
                             </div>
-                            <div class="created-for-items">
+                            <div class="section__items">
                                 <div class="item">
-                                    <div class="item-img"></div>
+                                    <div class="item__img"></div>
                                     <h4>Lorem lorem</h4>
                                 </div>
     
                                 <div class="item">
-                                    <div class="item-img"></div>
+                                    <div class="item__img"></div>
                                     <h4>Lorem lorem</h4>
                                 </div>
                             </div>
@@ -178,19 +174,19 @@
                         <!-- /created for -->
 
                         <!-- most-popular -->
-                        <section class="most-popular">
+                        <section>
                             <h2>Lorem</h2>
-                            <div class="section-subtitle">
+                            <div class="section__subtitle">
                                 Lorem ipsum dolor sit amet 
                             </div>
-                            <div class="created-for-items">
+                            <div class="section__items">
                                 <div class="item">
-                                    <div class="item-img circle"></div>
+                                    <div class="item__img item__img--circle"></div>
                                     <h4>Lorem lorem</h4>
                                 </div>
     
                                 <div class="item">
-                                    <div class="item-img circle"></div>
+                                    <div class="item__img item__img--circle"></div>
                                     <h4>Lorem lorem</h4>
                                 </div>
                             </div>
@@ -205,15 +201,15 @@
     
         </div>
         <!-- footer -->
-        <footer class="actions-bar">
+        <footer>
 
             <!-- actions-left -->
-            <div class="actions-left">
-                <div class="current-track">
-                    <div class="track-img">
+            <div class="footer__box">
+                <div class="box__items current-track">
+                    <div class="current-track__img">
 
                     </div>
-                    <div class="track-text">
+                    <div class="current-track__text">
                         <h5>
                             Sinister
                         </h5>
@@ -223,12 +219,12 @@
                     </div>
                 </div>
 
-                <div class="current-track-icons">
-                    <button type="button"class="btn">
-                        <i class="far fa-heart"></i>
+                <div class="box__items current-track-icons">
+                    <button type="button"class="btn icon icon--heart">
+                        <!-- <i class="far fa-heart"></i> -->
                     </button>
-                    <button type="button"class="btn">
-                        <i class="far fa-folder"></i>
+                    <button type="button"class="btn icon icon--folder">
+                        <!-- <i class="far fa-folder"></i> -->
                     </button>
                 </div>
 
@@ -236,42 +232,37 @@
             <!-- /actions-left -->
 
             <!-- actions-center -->
-            <div class="actions-center">
-                <div class="center-top">
-                    <ul>
+            <div class="footer__box actions-center">
+                <div class="box__items center center--top">
+                    <ul class="fa-ul">
                         <li>
-                            <button type="button" class="btn">
-                                <i class="fas fa-random"></i>
+                            <button type="button" class="btn icon icon--shuffle">
                             </button>                            
                         </li>
                         <li>
-                            <button type="button" class="btn">
-                                <i class="fas fa-step-backward"></i>
+                            <button type="button" class="btn icon icon--back">
                             </button>
                         </li>
                         <li>
-                            <button type="button" class="btn play">
-                                <i class="far fa-play-circle"></i>
+                            <button type="button" class="btn icon icon--play">
                             </button>
                         </li>
                         <li>
-                            <button type="button" class="btn">
-                                <i class="fas fa-step-forward"></i>
+                            <button type="button" class="btn icon icon--next">
                             </button>
                         </li>
                         <li>
-                            <button type="button" class="btn">
-                                <i class="fas fa-redo"></i>
+                            <button type="button" class="btn icon icon--redo">
                             </button>
                         </li>
 
                     </ul>
                 </div>
-                <div class="center-bottom">
+                <div class="box__items center center--bottom">
                     <div class="duration">
                         0:25
                     </div>
-                    <div class="duration-bar"></div>
+                    <div class="duration__bar"></div>
                     <div class="duration">
                         4:35
                     </div>
@@ -281,25 +272,22 @@
             <!-- /actions-center -->
 
             <!-- actions-right -->
-            <div class="actions-right">
-                <ul>
+            <div class="footer__box actions-right">
+                <ul class="box__items">
                     <li>
-                        <button type="button" class="btn">
-                            <i class="fas fa-list"></i>
+                        <button type="button" class="btn icon icon--list">
                         </button>                            
                     </li>
                     <li>
-                        <button type="button" class="btn">
-                            <i class="fas fa-desktop"></i>
+                        <button type="button" class="btn icon icon--monitor">
                         </button>                            
                     </li>
                     <li>
-                        <button type="button" class="btn">
-                            <i class="fas fa-volume-up"></i>
+                        <button type="button" class="btn icon icon--volume-up">
                         </button>                            
                     </li>
                     <li>
-                        <div class="duration-bar"></div>
+                        <div class="duration__bar"></div>
 
                     </li>
                 </ul>
