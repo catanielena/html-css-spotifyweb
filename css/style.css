@@ -10,6 +10,7 @@
     --dark: #141922;
     --dark-grey: #282828;
     --grey: #7d7f84;
+    --green: #adff2f;
     --icon-grey: #a3a3a3;
     --home-icon: "\f015";
     --search-icon: "\f002";
@@ -31,12 +32,13 @@
 body {
     background-color: var(--dark);
     color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
 }
 
 ul {
     list-style: none;
 }
-
 
 .fa-ul {
     margin-left: 0;
@@ -45,24 +47,31 @@ ul {
     display: block;
 }
 
-/* icons */
-li.icon::before, .btn.icon::before {
-    font-family: "Font Awesome 5 Free";
-    display: inline-block;
-    margin-left: .5rem;
-    width: 1rem; 
-    color: var(--icon-grey);
+.item__img--circle {
+    border-radius: 50%;
 }
 
-li.icon--home::before {
+.uppercase{
+    text-transform: uppercase;
+}
+/* icons */
+.icon::before {
+    font-family: "Font Awesome 5 Free";
+    display: inline-block;
+    color: var(--icon-grey);
+    width: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.btn.icon--home::before {
     content: var(--home-icon);
     font-weight: 900;
 }
-li.icon--search::before {
+.btn.icon--search::before {
     content: var(--search-icon);
     font-weight: 900;
 }
-li.icon--library::before {
+.btn.icon--library::before {
     content: var(--library-icon);
     font-weight: 900;
 }
@@ -70,8 +79,9 @@ li.icon--library::before {
     content: var(--plus-icon);
     font-weight: 900;
 }
-li.icon--dowload::before {
+.btn.icon--download::before {
     content: var(--download-icon);
+    font-size: .8rem;
 }
 .btn.icon--heart::before {
     content: var(--heart-icon);    
@@ -133,7 +143,7 @@ h2{
 }
 
 h4{
-    margin: 20px 0 10px;
+    font-size: .85rem;
 }
 
 /* main-container */
@@ -151,10 +161,26 @@ aside {
     flex-direction: column;
     overflow: hidden;
     background-color: black;
+    text-align: center;
 }
 
 .aside__nav.main-nav {
     flex-grow: 1;
+}
+
+aside .main-nav li{
+    padding: .5rem 0;
+}
+
+#li-profile{
+    padding: .8rem 0 .4rem;
+}
+
+.logo__small, .profile-img {
+    width: 1.5em;
+}
+.logo__extended{
+    display: none;
 }
 
 .aside__nav.playlist-nav {
@@ -165,9 +191,21 @@ aside {
     width: 100%;
 }
 
-.list__icon-text {
+.list__icon-text, .btn__label {
     display: none;
 }
+
+.profile-img{
+    border-radius: 50%;
+    background-color: var(--grey);
+    width: 1.5rem;
+    height:1.5rem;
+    vertical-align: middle;
+    margin-right: .3rem;;
+}
+
+
+
 
 
 /* main */
@@ -222,14 +260,11 @@ main {
 .section__subtitle {
     margin-bottom: 20px;
 }
+
 .item__img {
     width: 95%;
     padding-bottom: 100%;
     background-color: lightcyan;
-}
-
-.item__img--circle{
-    border-radius: 50%;
 }
 
 .item__subtitle {
@@ -337,23 +372,99 @@ footer {
     /* aside */
     aside {
         flex-basis: 230px;
+        text-align: left;
     }
 
     .aside__nav.main-nav {
         flex-grow: 0;
+        margin-bottom: .5rem;
+    }
+
+
+    li.list__logo{
+        height: 85px;
+        display: flex;
+        align-items: center;
+    }
+
+    .logo__small{
+        display: none;
+    }
+    img.logo__extended{
+        display: inline-block;
+        width: 70%;
     }
 
     .aside__nav.playlist-nav {
         overflow-y: auto;
         flex-grow: 1;
-        background-color: green;
         display: block;
     }
+    
+    aside .icon::before{
+        margin-right: .3rem;
+        font-size: 1.2rem;
+    }
 
-    .list__icon-text {
+    .list__icon-text, .btn__label {
         display: inline-block;
+        color: var(--grey);
+        font-size: .8rem;
+        vertical-align: middle;
+        font-weight: 700;
+    }
+
+    aside li.active{
+        border-left: 3px solid var(--green);
+        padding-left: -3px;
+    }
+
+    aside li.active .btn__label{
+        color: white;
+        font-weight: 600;
+    } 
+    aside li:not(.main-nav li){
+        padding: .4rem 0;
+    }
+
+    aside .main-nav li{
+        padding: .3rem .8rem;
     }
     
+    .playlist-nav, .aside__bottom{
+        padding: 0 .8rem;
+        margin: 10px 0 0;
+    }
+
+    .aside__bottom li:first-child {
+        border-bottom: 1px solid var(--icon-grey);
+    }
+
+    .btn.icon--download::before{
+        text-align: left;
+        width: auto;
+    }
+
+
+    .btn.profile .btn__label{
+        font-size: .85rem;
+        color: white;        
+    }
+
+
+    #new-playlist{
+        margin: .7rem 0;
+    }
+
+    #new-playlist::before{
+        width: 30px;
+        height: 30px;
+        background-color: var(--icon-grey);
+        color: black;
+        font-size: 1.1rem;
+        line-height: 30px;
+    }
+
     
     /* main */
     main {

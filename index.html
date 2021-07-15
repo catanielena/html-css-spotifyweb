@@ -7,6 +7,11 @@
         <!-- font-awesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <!-- /font-awesome -->
+        <!-- Monserrat_Google-font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <!-- Monserrat_Google-font -->
         <link rel="stylesheet" href="css/style.css">
         <title>Spotify</title>
     </head>
@@ -19,49 +24,92 @@
                 
                 <nav class="aside__nav main-nav">
                     <ul class="nav__list fa-ul">
-                        <li class="icon icon--home">  
-                            <div class="list__icon-text">
-                                Lorem lorem
-                            </div>                          
+                        <li class="list__logo"> 
+                            
+                                <img class="logo__small" src="img/logo-small.svg" alt="spotify-logo">
+                                <img class="logo__extended" src="img/logo.svg" alt="spotify-logo">
+                                                    
                         </li>
-                        <li class="icon icon--home">  
-                            <div class="list__icon-text">
-                                Lorem lorem
-                            </div>                          
+                        <li class="list__item active">
+                            <button type="button" class="btn icon icon--home">
+                                <div class="btn__label">
+                                    Home
+                                </div>  
+                            </button>                             
                         </li>
-                        <li class="icon icon--home">  
-                            <div class="list__icon-text">
-                                Lorem lorem
-                            </div>                          
+                        <li class="list__item">
+                            <button type="button" class="btn icon icon--search">
+                                <div class="btn__label">
+                                    Cerca
+                                </div>  
+                            </button>                             
+                        </li>
+                        <li class="list__item">
+                            <button type="button" class="btn icon icon--library">
+                                <div class="btn__label">
+                                    La tua libreria
+                                </div>  
+                            </button>                             
                         </li>
                     </ul>
                 </nav>
                 <nav class="aside__nav playlist-nav">
-                    <button class="playlist-nav__btn btn icon icon--plus">
+                    <h4 class="uppercase">playlist</h4>
+                    <button class="playlist-nav__btn btn icon icon--plus btn__label" id="new-playlist">
                         Crea Playlist
                     </button>
                 
                     <ul class="playlist-nav__list">
-                        <li>Lorem</li>
-                        <li>Lorem</li>
-                        <li>Lorem</li>
-                        <li>Lorem</li>
-                        <li>Lorem</li>
-                        <li>Lorem</li>
+                        <li class="list__item">
+                            <button type="button" class="btn btn__label">
+                                Nome Playlist
+                            </button>                             
+                        </li>
+                        <li class="list__item">
+                            <button type="button" class="btn btn__label">
+                                Nome Playlist
+                            </button>                             
+                        </li>
+                        <li class="list__item">
+                            <button type="button" class="btn btn__label">
+                                Nome Playlist
+                            </button>                             
+                        </li>
+                        <li class="list__item">
+                            <button type="button" class="btn btn__label">
+                                Nome Playlist
+                            </button>                             
+                        </li>
+                        <li class="list__item">
+                            <button type="button" class="btn btn__label">
+                                Nome Playlist
+                            </button>                             
+                        </li>
+                        <li class="list__item">
+                            <button type="button" class="btn btn__label">
+                                Nome Playlist
+                            </button>                             
+                        </li>
                     </ul>
                 </nav>
                 
                 <div class="aside__bottom">
                     <ul class="fa-ul">
-                        <li class="icon icon--dowload">  
-                            <div class="list__icon-text">
-                                Lorem lorem
-                            </div>  
+                        <li class="list__item">
+                            <button type="button" class="btn icon icon--download">
+                                <div class="btn__label">
+                                    Installa app
+                                </div>  
+                            </button>                             
                         </li>
-                        <li> 
-                            <div class="list__icon-text">
-                                Lorem lorem
-                            </div>                          
+                        <li id="li-profile"> 
+                            <button type="button" class="btn icon profile">
+                                <img src="img/profile.svg" alt="profile-img" class="profile-img">
+                                <div class="btn__label">
+
+                                    John Doe 
+                                </div>
+                            </button>                         
                         </li>
                     </ul>
                 </div>
