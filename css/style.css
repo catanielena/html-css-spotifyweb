@@ -93,17 +93,14 @@ li.icon--dowload::before {
 .btn.icon--next::before {
     content: var(--next-icon);
     font-weight: 900;
-
 }
 .btn.icon--redo::before {
     content: var(--redo-icon);
     font-weight: 900;
-
 }
 .btn.icon--list::before {
     content: var(--list-icon);
     font-weight: 900;
-
 }
 .btn.icon--monitor::before {
     content: var(--monitor-icon);
@@ -112,7 +109,6 @@ li.icon--dowload::before {
 .btn.icon--volume-up::before {
     content: var(--volume-up-icon);
     font-weight: 900;
-
 }
 
 /* button */
