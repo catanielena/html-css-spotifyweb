@@ -59,6 +59,9 @@ ul {
     color: var(--icon-grey);
 }
 
+.btn:hover.icon::before {
+    color: white;
+}
 
 .btn.icon--plus::before {
     content: var(--plus-icon);
@@ -106,14 +109,23 @@ ul {
     font-weight: 900;
 }
 
+.btn:hover.btn__label, .btn:hover .btn__label{
+    color: white;
+}
+
 
 /* button */
+a{
+    color: var(--grey);
+    text-decoration: none;
+}
 button{
     border: none;
     border-width: 0;
     background-color: transparent;
     font-size: .8rem;
     vertical-align: middle;
+    cursor: pointer;
 }
 
 .btn--round-border{
@@ -135,6 +147,15 @@ button{
     font-weight: 600;
 }
 
+.btn--scale:hover {
+    transform: scale(1.13);
+    transition: transform .11s linear;
+}
+a:hover{
+    color: white;
+    text-decoration: underline;
+}
+
 
 /* typo */
 h3{
@@ -144,7 +165,13 @@ h3{
 h4{
     font-size: .85rem;
 }
+h5{
+    margin-block-end: 0;
+}
 
+h1, h2, h3, h4, h5 {
+    color: white;
+}
 .text--sm{
     font-size: .65rem;
 }
@@ -190,6 +217,9 @@ aside .main-nav li{
     display: inline-block;
     vertical-align: middle;
 }
+.playlist-nav__btn:hover#new-playlist::before{
+    background-color: white;
+}
 
 
 .aside__nav.playlist-nav, .aside__playlist-head {
@@ -220,11 +250,17 @@ aside .main-nav li{
     text-align: center;
     width: 1rem;
 }
-#download-icon img{
+
+
+#download-icon #svg-download{
     width: 100%;
     padding-top: calc((100% - .5rem) / 2);
+    fill: var(--grey);
 }
 
+.btn:hover #svg-download path{
+    fill:white;
+}
 
 
 
@@ -254,6 +290,7 @@ main {
 .content__nav {
     text-align: center;
 }
+
 .content__nav li {
     display: inline-block;
 }
@@ -274,7 +311,9 @@ main {
     margin: auto calc((100% - 50px) / 2);
     background-color: var(--green);
 }
-
+.content__nav li .btn:hover {
+    color: white;
+}
 
 
 .content__sec {
@@ -352,10 +391,6 @@ footer {
     flex-basis: calc(100% / 3);
 }
 
-.footer__box:not(:first-child) .icon::before{
-    color: white;
-}
-
 
 .footer__box, .current-track{
     display: flex;
@@ -364,6 +399,10 @@ footer {
 
 .center--top li, .actions-right li {
     display: inline-block;
+}
+
+.footer__box:not(:first-child) .btn::before{
+    color: white;
 }
 
 
@@ -377,9 +416,6 @@ footer {
     width: 100%;
     object-fit: cover;
     display: block;
-}
-.track-name{
-    color: var(--grey);
 }
 .current-track__text {
     margin: 0 8px 0 13px;
@@ -407,11 +443,16 @@ footer {
 }
 
 .center.center--top li{
-    margin: 0 .1rem;
+    width: 1.3rem;
 }
 
 .center.center--top .btn.icon--play::before {
-    font-size: 1.6rem;
+    font-size: 1.1rem;
+}
+
+.center.center--top .btn:hover.icon--play::before {
+    position: relative;
+    font-size: 1.3rem;
 }
 
 .center .player__bar{   
@@ -634,8 +675,18 @@ footer {
     }
 
     .center.center--top li{
-        margin: 0 .5rem;
+        width: 1.8rem;
     }
+    
+    .center.center--top .btn.icon--play::before {
+        font-size: 1.6rem;
+    }
+    
+    .center.center--top .btn:hover.icon--play::before {
+        position: relative;
+        font-size: 1.8rem;
+    }
+    
 
 }
 
