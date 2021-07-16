@@ -12,9 +12,6 @@
     --grey: #7d7f84;
     --green: #adff2f;
     --icon-grey: #a3a3a3;
-    --home-icon: "\f015";
-    --search-icon: "\f002";
-    --library-icon: "\f518";
     --plus-icon: "\f067";
     --download-icon: "\f358";
     --heart-icon: "\f004";
@@ -39,7 +36,6 @@ body {
 ul {
     list-style: none;
 }
-
 .fa-ul {
     margin-left: 0;
 }
@@ -49,31 +45,21 @@ ul {
 
 .item__img--circle {
     border-radius: 50%;
+    overflow: hidden;
 }
 
 .uppercase{
     text-transform: uppercase;
 }
-/* icons */
 
+/* icons */
 .icon::before {
     font-family: "Font Awesome 5 Free";
     display: inline-block;
     color: var(--icon-grey);
 }
 
-.btn.icon--home::before {
-    content: var(--home-icon);
-    font-weight: 900;
-}
-.btn.icon--search::before {
-    content: var(--search-icon);
-    font-weight: 900;
-}
-.btn.icon--library::before {
-    content: var(--library-icon);
-    font-weight: 900;
-}
+
 .btn.icon--plus::before {
     content: var(--plus-icon);
     font-weight: 900;
@@ -120,6 +106,7 @@ ul {
     font-weight: 900;
 }
 
+
 /* button */
 button{
     border: none;
@@ -147,11 +134,12 @@ button{
     font-weight: 600;
 }
 
-/* typo */
-h2{
-    margin-bottom: 10px;
-}
 
+/* typo */
+h3{
+    font-size: 1rem;
+    margin: 1rem 0 .5rem;
+}
 h4{
     font-size: .85rem;
 }
@@ -179,24 +167,26 @@ aside {
 }
 
 aside .main-nav li{
-    padding: .5rem 0;
+    margin: .5rem 0;
 }
 
 #li-profile{
     padding: .8rem 0 .4rem;
 }
 
-.logo__small, .profile-img {
+.logo__small, .profile-img, .btn--img {
     width: 1.5em;
 }
 .logo__extended{
     display: none;
 }
 
-aside .icon::before{
-    font-size: 1.2rem;
-    width: 1.2rem;
+.btn--img{
+    display: inline-block;
+    vertical-align: middle;
 }
+
+
 .aside__nav.playlist-nav, .aside__playlist-head {
     display: none;
 }
@@ -206,17 +196,29 @@ aside .icon::before{
 
 .list__icon-text, .btn__label {
     display: none;
+    vertical-align: middle;
 }
 
-.profile-img{
+.btn.profile img{
     border-radius: 50%;
     background-color: var(--grey);
     width: 1.5rem;
     height:1.5rem;
     vertical-align: middle;
-    margin-right: .3rem;;
 }
 
+.aside__bottom .btn--img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+#download-icon{
+    text-align: center;
+    width: 1rem;
+}
+#download-icon img{
+    width: 100%;
+    padding-top: calc((100% - .5rem) / 2);
+}
 
 
 
@@ -244,11 +246,12 @@ main {
     height: calc(100vh - 90px);
 }
 
-.content__nav li {
-    display: inline-block;
-}
 .content__nav {
     text-align: center;
+    padding: 0 1.4rem;
+}
+.content__nav li {
+    display: inline-block;
 }
 
 .content__nav  li .btn {
@@ -276,11 +279,11 @@ main {
 .content__sec section {
     margin-bottom: 20px;
 }
-.content__sec section > div{
+.content__sec .items__row{
     display: flex;
     flex-flow: row wrap;
+    margin-top: 1.8rem;
 }
-
 
 .item {
     width: 50%;
@@ -288,7 +291,7 @@ main {
 }
 .item__img {
     width: 95%;
-    background-color: lightcyan;
+    background-color: lightcyan; /*temp*/
     position: relative;
 }
 .item__img::after{
@@ -301,14 +304,34 @@ main {
     top: 0;
     left: 0;
     position: absolute;
+    display: block;
 }
 
+.item__img:hover .img--overlay::after{
+    position: absolute;
+    content: var(--play-icon);
+    font-size: 3rem;
+    font-weight: 500;
+    font-family: "Font Awesome 5 Free";
+    display: inline-block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-top: calc((100% - 3rem) / 2);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+}
 
+.subtitle{
+    font-size: .75rem;
+    color: var(--grey);
+}
 .section__subtitle {
-    margin-bottom: 20px;
+    margin: .5rem 0;
 }
 .item__subtitle {
-    margin-bottom: 10px;
+    margin-bottom: .5rem;
 }
 
 /* footer */
@@ -368,15 +391,16 @@ footer {
     align-items: center;
 }
 
-.duration__bar {
+.player__bar {
     width: 100%;
     height: 5px;
     background-color:#5a5a5a;
     position: relative;
     border-radius: 10px;
+    margin: 0 1.5rem;
 }
 
-.duration__bar::before {
+.player__bar::before {
     content: '';
     position: absolute;
     left: 0;
@@ -385,11 +409,6 @@ footer {
     border-radius: 10px;
     background-color: #c1c1c1;
 }
-
-.duration {
-    margin: 0 10px;
-}
-
 
 .actions-right ul {
     width: 100%;
@@ -440,6 +459,9 @@ footer {
         display: inline-block;
         width: 70%;
     }
+    aside .main-nav li{
+        margin: 0;
+    }
 
 
     .aside__content{
@@ -465,6 +487,13 @@ footer {
     aside .icon::before{
         margin-right: .3rem;
     }
+
+    .btn--img{
+        display: inline-block;
+        width: 1.3rem;
+        vertical-align: middle;
+    }
+
 
     .list__icon-text, .btn__label {
         display: inline-block;
@@ -493,6 +522,7 @@ footer {
 
     .aside__bottom li:first-child {
         border-bottom: 1px solid var(--icon-grey);
+        text-align: left;
     }
 
     .btn.icon--download::before{

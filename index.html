@@ -31,21 +31,30 @@
                                                     
                         </li>
                         <li class="list__item active">
-                            <button type="button" class="btn icon icon--home">
+                            <button type="button" class="btn">
+                                <div class="btn--img">
+                                    <img src="img/home.svg" alt="">
+                                </div>
                                 <div class="btn__label">
                                     Home
                                 </div>  
                             </button>                             
                         </li>
                         <li class="list__item">
-                            <button type="button" class="btn icon icon--search">
+                            <button type="button" class="btn">
+                                <div class="btn--img">
+                                    <img src="img/search.svg" alt="">
+                                </div>
                                 <div class="btn__label">
                                     Cerca
                                 </div>  
                             </button>                             
                         </li>
                         <li class="list__item">
-                            <button type="button" class="btn icon icon--library">
+                            <button type="button" class="btn">
+                                <div class="btn--img">
+                                    <img src="img/libreria.svg" alt="">
+                                </div>
                                 <div class="btn__label">
                                     La tua libreria
                                 </div>  
@@ -98,7 +107,10 @@
                 <div class="aside__bottom">
                     <ul class="fa-ul">
                         <li class="list__item">
-                            <button type="button" class="btn icon icon--download">
+                            <button type="button" class="btn">
+                                <div class="btn--img" id="download-icon">
+                                    <img src="img/download.svg" alt="download-icon">
+                                </div>
                                 <div class="btn__label">
                                     Installa app
                                 </div>  
@@ -106,7 +118,7 @@
                         </li>
                         <li id="li-profile"> 
                             <button type="button" class="btn icon profile">
-                                <img src="img/profile.svg" alt="profile-img" class="profile-img">
+                                <img src="img/profile.svg" alt="profile-img">
                                 <div class="btn__label">
 
                                     John Doe 
@@ -160,65 +172,101 @@
                     <div class="content__sec">
                         <!-- recently-played -->
                         <section>
-                            <h2>Recently played</h2>
                             <div class="section__items recent-items">
-                                <div class="item">
-                                    <div class="item__img">
-                                        <img src="img/metal_lifting.jpg" alt="">
+                                <h2>Recently played</h2>
+                                <div class="items__row">
+                                    <div class="item">
+                                        <div class="item__img">
+                                            <div class="img--overlay">
+                                                <img src="img/metal_lifting.jpg" alt="heavy-metal__album">
+                                            </div>
+                                        </div>
+                                        <h3>Heavy metal</h3>
+                                        <div class="item__subtitle subtitle">Subtitle</div>
                                     </div>
-                                    <h4>Lorem lorem</h4>
-                                    <div class="item__subtitle">lorem</div>
-                                </div>
     
-                                <div class="item">
-                                    <div class="item__img"></div>
-                                    <h4>Lorem lorem</h4>
-                                    <div class="item__subtitle">lorem</div>
-                                </div>
+                                    <div class="item">
+                                        <div class="item__img">
+                                            <div class="img--overlay">
+                                                <img src="img/stranger.jpeg" alt="stranger-things-soundtrack__album">
+                                            </div>
+                                        </div>
+                                        <h3>Stranger Things, Vol. 1 (a Netflix Original Series Soundtrack)</h3>
+                                        <div class="item__subtitle subtitle">Kyle Dixon & Micheal Stein</div>
+                                    </div>
     
-                                <div class="item">
-                                    <div class="item__img"></div>
-                                    <h4>Lorem lorem</h4>
-                                    <div class="item__subtitle">lorem</div>
-                                </div>
+                                    <div class="item">
+                                        <div class="item__img">
+                                            <div class="img--overlay">
+                                                <img src="img/aquietplace.jpeg" alt="a-quite-place__alcum">
+                                            </div>
+                                        </div>
+                                        <h3>A quite place</h3>
+                                        <div class="item__subtitle subtitle">Subtitle</div>
+                                    </div>
+                                    
+                                    <div class="item">
+                                        <div class="item__img">
+                                            <div class="img--overlay">
+                                                <img src="img/split.jpeg" alt="split-soundtrack__album">
+                                            </div>
+                                        </div>
+                                        <h3>Split</h3>
+                                        <div class="item__subtitle subtitle">Subtitle</div>
+                                    </div>
     
-                                <div class="item">
-                                    <div class="item__img"></div>
-                                    <h4>Lorem lorem</h4>
-                                    <div class="item__subtitle">lorem</div>
-                                </div>
+                                    <div class="item">
+                                        <div class="item__img">
+                                            <div class="img--overlay">
+                                                <img src="img/cure.jpeg" alt="a-cure-of-wellness__album">
+                                            </div>
+                                        </div>
+                                        <h3>A cure of wellness</h3>
+                                        <div class="item__subtitle subtitle">Subtitle</div>
+                                    </div>
     
-                                <div class="item">
-                                    <div class="item__img"></div>
-                                    <h4>Lorem lorem</h4>
-                                    <div class="item__subtitle">lorem</div>
-                                </div>
+                                    <div class="item">
+                                        <div class="item__img">
+                                            <div class="img--overlay">
+                                                <img src="img/sinister.jpeg" alt="sinister__album">
+                                            </div>
+                                        </div>
+                                        <h3>Sinister</h3>
+                                        <div class="item__subtitle subtitle">Subtitle</div>
+                                    </div>
     
-                                <div class="item">
-                                    <div class="item__img"></div>
-                                    <h4>Lorem lorem</h4>
-                                    <div class="item__subtitle">lorem</div>
                                 </div>
+
+    
                                 
                             </div>
                         </section>
                         <!-- /recently-played -->
 
                         <!-- created for -->
-                        <section>
-                            <h2>Lorem</h2>
-                            <div class="section__subtitle">
-                                Lorem ipsum dolor sit amet 
+                        <section class="section__items">
+                            <h2>Creato per John Doe</h2>
+                            <div class="section__subtitle subtitle">
+                                Più ascolti, più accurati saranno i suggerimenti.
                             </div>
-                            <div class="section__items">
+                            <div class="items__row">
+                            
                                 <div class="item">
-                                    <div class="item__img"></div>
-                                    <h4>Lorem lorem</h4>
+                                    <div class="item__img">
+                                        <div class="img--overlay">
+                                            <img src="img/radar.jpeg" alt="release-radar__playlist">
+                                        </div>
+                                    </div>
+                                    <h3>Release Radar</h3>
                                 </div>
-    
+        
                                 <div class="item">
-                                    <div class="item__img"></div>
-                                    <h4>Lorem lorem</h4>
+                                    <div class="item__img">
+                                        <div class="img--overlay">
+                                            <img src="img/mixdaily.jpeg" alt="daily-mix__playlist">
+                                        </div>
+                                    </div>
+                                    <h3>Daily mix 1</h3>
                                 </div>
                             </div>
                         </section>
@@ -226,23 +274,32 @@
 
                         <!-- most-popular -->
                         <section>
-                            <h2>Lorem</h2>
-                            <div class="section__subtitle">
-                                Lorem ipsum dolor sit amet 
+                            <h2>Artisti più popolari</h2>
+                            <div class="section__subtitle subtitle">
+                                Più ascolti, più accurati saranno i suggerimenti.
                             </div>
-                            <div class="section__items">
+                            <div class="items__row">
+                            
                                 <div class="item">
-                                    <div class="item__img item__img--circle"></div>
-                                    <h4>Lorem lorem</h4>
+                                    <div class="item__img item__img--circle">
+                                        <div class="img--overlay">
+                                            <img src="img/youg.jpeg" alt="release-radar__playlist">
+                                        </div>
+                                    </div>
+                                    <h3>Release Radar</h3>
                                 </div>
-    
+        
                                 <div class="item">
-                                    <div class="item__img item__img--circle"></div>
-                                    <h4>Lorem lorem</h4>
+                                    <div class="item__img item__img--circle">
+                                        <div class="img--overlay">
+                                            <img src="img/einaudi.jpeg" alt="daily-mix__playlist">
+                                        </div>
+                                    </div>
+                                    <h3>Daily mix 1</h3>
                                 </div>
                             </div>
+                        </section>
                     </div>
-                    </section>
                     <!-- /most-popular -->
 
                 </div>
@@ -309,11 +366,11 @@
                     </ul>
                 </div>
                 <div class="box__items center center--bottom">
-                    <div class="duration">
+                    <div class="player player__text">
                         0:25
                     </div>
-                    <div class="duration__bar"></div>
-                    <div class="duration">
+                    <div class="player__bar"></div>
+                    <div class="player player__text">
                         4:35
                     </div>
                 </div>
