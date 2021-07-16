@@ -165,9 +165,6 @@ h3{
 h4{
     font-size: .85rem;
 }
-h5{
-    margin-block-end: 0;
-}
 
 h1, h2, h3, h4, h5 {
     color: white;
@@ -475,8 +472,12 @@ footer {
     background-color: #c1c1c1;
 }
 
-.center .player__bar:hover .current-player{
+.center .player__bar:active .current-player,
+.center .player__bar:hover .current-player {
     background-color: var(--green);
+}
+
+.center .player__bar:active .current-player {
     width: 100%;
     transition: width 3s;
 }
@@ -493,8 +494,11 @@ footer {
     background-color: white;
 }
 
+.actions-right .player__bar:active .current-player,
 .actions-right .player__bar:hover .current-player{
     background-color: var(--green);
+}
+.actions-right .player__bar:active .current-player{
     width: 100%;
     transition: width 2s;
 }
@@ -538,12 +542,14 @@ footer {
 
     .aside__nav.main-nav {
         flex-grow: 0;
-        margin-bottom: .5rem;
+    }
+
+    aside > nav, aside > div:not(aside > div:last-child){   
+        margin-bottom: 10px;
     }
     
     aside > div, aside > nav:not(nav:first-child){
         padding: 0 .8rem;
-        margin: 10px 0 0;
     }
 
 
@@ -624,7 +630,6 @@ footer {
 
     .aside__bottom li:first-child {
         border-bottom: 1px solid var(--icon-grey);
-        text-align: left;
     }
 
     .btn.icon--download::before{
@@ -640,7 +645,7 @@ footer {
 
 
     #new-playlist{
-        margin: .7rem 0;
+        margin-top: .5rem;
     }
 
     #new-playlist::before{
