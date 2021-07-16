@@ -112,7 +112,8 @@ button{
     border: none;
     border-width: 0;
     background-color: transparent;
-    font-size: 1rem;
+    font-size: .8rem;
+    vertical-align: middle;
 }
 
 .btn--round-border{
@@ -142,6 +143,10 @@ h3{
 }
 h4{
     font-size: .85rem;
+}
+
+.text--sm{
+    font-size: .65rem;
 }
 
 /* main-container */
@@ -347,6 +352,10 @@ footer {
     flex-basis: calc(100% / 3);
 }
 
+.footer__box:not(:first-child) .icon::before{
+    color: white;
+}
+
 
 .footer__box, .current-track{
     display: flex;
@@ -362,7 +371,15 @@ footer {
 .current-track__img {
     width: 30px;
     height: 30px;
-    background-color: red;
+}
+
+.current-track__img img{
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+.track-name{
+    color: var(--grey);
 }
 .current-track__text {
     margin: 0 25px 0 13px;
@@ -382,12 +399,22 @@ footer {
 .center {
     flex-basis: 100%;
     text-align: center;
-}
-
-.center--bottom {
+    height: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.center.center--top li{
+    margin: 0 .5rem;
+}
+
+.center.center--top .btn.icon--play::before {
+    font-size: 1.6rem;
+}
+
+.center .player__bar{   
+    margin: 0 1.5rem;
 }
 
 .player__bar {
@@ -396,18 +423,52 @@ footer {
     background-color:#5a5a5a;
     position: relative;
     border-radius: 10px;
-    margin: 0 1.5rem;
 }
 
-.player__bar::before {
-    content: '';
+.current-player {
     position: absolute;
-    left: 0;
     height: 5px;
     width: 30%;
     border-radius: 10px;
     background-color: #c1c1c1;
 }
+
+.center .player__bar:hover .current-player{
+    background-color: var(--green);
+    width: 100%;
+    transition: width 2s;
+}
+
+.center .player__bar:hover .current-player::after{
+    position: absolute;
+    content: '';
+    height: 15px;
+    width: 15px;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: calc(100% - 7.5px);
+    border-radius: 10px;
+    background-color: white;
+}
+
+.actions-right .player__bar:hover .current-player{
+    background-color: var(--green);
+    width: 100%;
+    transition: width 2s;
+}
+
+.actions-right .player__bar:hover .current-player::after{
+    position: absolute;
+    content: '';
+    height: 15px;
+    width: 15px;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: calc(100% - 7.5px);
+    border-radius: 10px;
+    background-color: white;
+}
+
 
 .actions-right ul {
     width: 100%;
@@ -420,7 +481,7 @@ footer {
 }
 
 .actions-right li:last-child {
-    width: 30%;
+    width: 25%;
 }
 
 
