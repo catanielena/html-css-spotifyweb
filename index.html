@@ -53,11 +53,13 @@
                         </li>
                     </ul>
                 </nav>
-                <nav class="aside__nav playlist-nav">
+                <div class="aside__playlist-head">
                     <h4 class="uppercase">playlist</h4>
                     <button class="playlist-nav__btn btn icon icon--plus btn__label" id="new-playlist">
                         Crea Playlist
                     </button>
+                </div>
+                <nav class="aside__nav playlist-nav">                   
                 
                     <ul class="playlist-nav__list">
                         <li class="list__item">
@@ -113,56 +115,57 @@
                         </li>
                     </ul>
                 </div>
+                
+            
             </aside>
             <!-- /aside -->
     
             <!-- main -->
             <main>
                 <div class="main__head">
-                    Lorem ipsum 
+                    <button class="btn btn--round-border btn--white uppercase">
+                        effettua l'upgrade
+                    </button>
                 </div>
                 <div class="main__content">
                     <nav class="content__nav">
                         <ul>
-                            <li>
-                                <a href="#" class="btn">
-                                    genre
-                                </a>
+                            <li class="active">
+                                <button type="button" class="btn btn--grey uppercase active">
+                                    in evidenza
+                                </button>
                             </li>
                             <li>
-                                <a href="#" class="btn">
-                                    genre
-                                </a>
+                                <button type="button"  class="btn btn--grey uppercase">
+                                    podcast
+                                </button>
                             </li>
                             <li>
-                                <a href="#" class="btn">
-                                    genre
-                                </a>
+                                <button type="button"  class="btn btn--grey uppercase">
+                                    generi e mood
+                                </button>
                             </li>
                             <li>
-                                <a href="#" class="btn">
-                                    genre
-                                </a>
+                                <button type="button"  class="btn btn--grey uppercase">
+                                    nuove uscite
+                                </button>
                             </li>
                             <li>
-                                <a href="#" class="btn">
-                                    genre
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn">
-                                    genre
-                                </a>
+                                <button type="button"  class="btn btn--grey uppercase">
+                                    scopri
+                                </button>
                             </li>
                         </ul>
                     </nav>
                     <div class="content__sec">
                         <!-- recently-played -->
                         <section>
-                            <h2>Lorem</h2>
+                            <h2>Recently played</h2>
                             <div class="section__items recent-items">
                                 <div class="item">
-                                    <div class="item__img"></div>
+                                    <div class="item__img">
+                                        <img src="img/metal_lifting.jpg" alt="">
+                                    </div>
                                     <h4>Lorem lorem</h4>
                                     <div class="item__subtitle">lorem</div>
                                 </div>
