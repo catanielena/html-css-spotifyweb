@@ -148,11 +148,11 @@ button{
     padding: .8rem 2.2rem;
 }
 
-.btn--white{
+.btn--border{
     color: white;
 }
 
-.btn--grey{
+.btn--color--grey{
     color: var(--grey);
 }
 
@@ -224,7 +224,9 @@ aside {
 }
 
 
-
+.nav__logo--size--small {
+    margin-top: .5rem;
+}
 
 .nav__logo--size--small, .profile-img, .btn__img {
     width: 1.5em;
@@ -292,29 +294,38 @@ main {
     padding: 1rem 1.4rem;
     z-index: 1;
 }
+
 .main__content {
     padding-top: 85px;
     overflow-y: auto;
     height: calc(100vh - 90px);
 }
 
-
 .content__nav {
     text-align: center;
 }
 
-.content__nav li {
+.content__inner {
+    padding: 20px 20px 0;
+}
+
+.inner__section {
+    margin-bottom: 20px;
+}
+
+.content__nav .nav__item{
     display: inline-block;
 }
 
-.content__nav  li .btn {
+.content__nav .item__btn {
     padding: 15px 10px;
 }
 
-.content__nav li.active{
+.content__nav .nav__item--active{
     position: relative;
 }
-.content__nav button.active::before {
+
+.content__nav .item__btn--active::before {
     content: "";
     position: absolute;
     height: 2px;
@@ -323,28 +334,23 @@ main {
     margin: auto calc((100% - 50px) / 2);
     background-color: var(--green);
 }
+
 .content__nav li .btn:hover {
     color: white;
 }
 
 
-.content__sec {
-    padding: 20px 20px 0;
-}
-.content__sec section {
-    margin-bottom: 20px;
-}
-.content__sec .items__row{
+.items__row{
     display: flex;
     flex-flow: row wrap;
     margin-top: 1.8rem;
 }
 
-
-.item {
+.row__item {
     width: 50%;
     text-align: center;
 }
+
 .item__img {
     width: 95%;
     position: relative;
@@ -644,7 +650,7 @@ footer .footer__box:first-child {
         font-weight: 700;
     }
 
-    .nav__item--active{
+    aside .nav__item--active{
         border-left: 3px solid var(--green);
         padding-left: -3px;
     }
@@ -802,7 +808,7 @@ footer .footer__box:first-child {
 @media screen and (min-width: 700px) {
 
     /* main */
-    .item {
+    .row__item {
         width: 25%;
     }
 
@@ -813,7 +819,7 @@ footer .footer__box:first-child {
 @media screen and (min-width: 1100px) {
 
     /* main */
-    .item {
+    .row__item {
         width: calc(100% / 6);
     }
 
