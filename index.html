@@ -43,16 +43,16 @@
             <aside>
                 
                 <nav class="aside__nav main-nav">
-                    <ul class="nav__list fa-ul">
-                        <li class="list__logo"> 
+                    <ul class="fa-ul">
+                        <li class="nav__logo"> 
                             
-                                <img class="logo__small" src="img/logo-small.svg" alt="spotify-logo">
-                                <img class="logo__extended" src="img/logo.svg" alt="spotify-logo">
+                                <img class="nav__logo nav__logo--size--small" src="img/logo-small.svg" alt="spotify-logo">
+                                <img class="nav__logo nav__logo--size--large" src="img/logo.svg" alt="spotify-logo">
                                                     
                         </li>
-                        <li class="list__item active">
-                            <button type="button" class="btn">
-                                <div class="btn--img">
+                        <li class="nav__item nav__item--active">
+                            <button type="button" class="item__btn btn">
+                                <div class="btn__img">
                                     <img src="img/home.svg" alt="">
                                 </div>
                                 <div class="btn__label">
@@ -60,9 +60,9 @@
                                 </div>  
                             </button>                             
                         </li>
-                        <li class="list__item">
-                            <button type="button" class="btn">
-                                <div class="btn--img">
+                        <li class="nav__item">
+                            <button type="button" class="item__btn btn">
+                                <div class="btn__img">
                                     <img src="img/search.svg" alt="">
                                 </div>
                                 <div class="btn__label">
@@ -70,9 +70,9 @@
                                 </div>  
                             </button>                             
                         </li>
-                        <li class="list__item">
-                            <button type="button" class="btn">
-                                <div class="btn--img">
+                        <li class="nav__item">
+                            <button type="button" class="item__btn btn">
+                                <div class="btn__img">
                                     <img src="img/libreria.svg" alt="">
                                 </div>
                                 <div class="btn__label">
@@ -82,66 +82,64 @@
                         </li>
                     </ul>
                 </nav>
-                <div class="aside__playlist-head">
+                <div class="aside__nav-head aside--display">
                     <h4 class="uppercase">playlist</h4>
-                    <button class="playlist-nav__btn btn icon icon--plus btn__label" id="new-playlist">
+                    <button class="nav-head__btn btn icon icon--plus btn__label btn--bg-hover">
                         Crea Playlist
                     </button>
                 </div>
-                <nav class="aside__nav playlist-nav">                   
+                <nav class="aside__nav playlist-nav aside--display">                   
                 
-                    <ul class="playlist-nav__list">
-                        <li class="list__item">
-                            <button type="button" class="btn btn__label">
+                    <ul>
+                        <li class="nav__item">
+                            <button type="button" class="item__btn btn">
                                 Nome Playlist
                             </button>                             
                         </li>
-                        <li class="list__item">
-                            <button type="button" class="btn btn__label">
+                        <li class="nav__item">
+                            <button type="button" class="item__btn btn">
                                 Nome Playlist
                             </button>                             
                         </li>
-                        <li class="list__item">
-                            <button type="button" class="btn btn__label">
+                        <li class="nav__item">
+                            <button type="button" class="item__btn btn">
                                 Nome Playlist
                             </button>                             
                         </li>
-                        <li class="list__item">
-                            <button type="button" class="btn btn__label">
+                        <li class="nav__item">
+                            <button type="button" class="item__btn btn">
                                 Nome Playlist
                             </button>                             
                         </li>
-                        <li class="list__item">
-                            <button type="button" class="btn btn__label">
+                        <li class="nav__item">
+                            <button type="button" class="item__btn btn">
                                 Nome Playlist
                             </button>                             
                         </li>
-                        <li class="list__item">
-                            <button type="button" class="btn btn__label">
+                        <li class="nav__item">
+                            <button type="button" class="item__btn btn">
                                 Nome Playlist
                             </button>                             
                         </li>
                     </ul>
                 </nav>
                 
-                <div class="aside__bottom">
+                <div class="aside__footer">
                     <ul class="fa-ul">
-                        <li class="list__item">
-                            <button type="button" class="btn">
-                                <div class="btn--img" id="download-icon">
-                                    <!-- <img src="img/download.svg" alt="download-icon"> -->
-                                    <svg id="svg-download" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Download icon</title><path d="M12 11.657V6h-1v5.65L9.076 9.414l-.758.65 3.183 3.702 3.195-3.7-.758-.653L12 11.657zM11.5 2C7.358 2 4 5.358 4 9.5c0 4.142 3.358 7.5 7.5 7.5 4.142 0 7.5-3.358 7.5-7.5C19 5.358 15.642 2 11.5 2zm0 14C7.916 16 5 13.084 5 9.5S7.916 3 11.5 3 18 5.916 18 9.5 15.084 16 11.5 16z" fill-rule="evenodd"/></svg>
+                        <li class="footer__item">
+                            <button type="button" class="item__btn btn">
+                                <div class="btn__img">
+                                    <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Download icon</title><path d="M12 11.657V6h-1v5.65L9.076 9.414l-.758.65 3.183 3.702 3.195-3.7-.758-.653L12 11.657zM11.5 2C7.358 2 4 5.358 4 9.5c0 4.142 3.358 7.5 7.5 7.5 4.142 0 7.5-3.358 7.5-7.5C19 5.358 15.642 2 11.5 2zm0 14C7.916 16 5 13.084 5 9.5S7.916 3 11.5 3 18 5.916 18 9.5 15.084 16 11.5 16z" fill-rule="evenodd"/></svg>
                                 </div>
                                 <div class="btn__label">
                                     Installa app
                                 </div>  
                             </button>                             
                         </li>
-                        <li id="li-profile"> 
-                            <button type="button" class="btn icon profile">
+                        <li class="footer__item"> 
+                            <button type="button" class="item__btn btn icon profile">
                                 <img src="img/profile.svg" alt="profile-img">
-                                <div class="btn__label">
-
+                                <div class="btn__label btn__label--white">
                                     John Doe 
                                 </div>
                             </button>                         
@@ -349,10 +347,10 @@
                 </div>
 
                 <div class="box__items current-track-icons">
-                    <button type="button" class="btn icon icon--heart">
+                    <button type="button" class="btn icon icon--heart icon--color-hover">
                         <!-- <i class="far fa-heart"></i> -->
                     </button>
-                    <button type="button" class="btn icon icon--folder">
+                    <button type="button" class="btn icon icon--folder icon--color-hover">
                         <!-- <i class="far fa-folder"></i> -->
                     </button>
                 </div>
