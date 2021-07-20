@@ -749,14 +749,16 @@ footer {
         font-size: .8rem;
     }
 
+    .current-track__item:last-child {
+        margin: 0;
+    }
+
 
     .icon--display {
         display: inline-block;
     }
     
-    .current-track__item:last-child {
-        margin-left: 8px;
-    }
+    
 
     
     .player__player-items:first-child {
@@ -814,6 +816,10 @@ footer {
     /* main */
     .row__item {
         width: 25%;
+    }
+
+    .current-track__item:last-child {
+        margin-left: 8px;
     }
 
 
